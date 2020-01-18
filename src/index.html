@@ -1,0 +1,75 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<div class="page">
+  <div class="row">
+    <div class="col-2 navbarBorder">
+      <nav id="navbar">
+        <header id="header"><h2 id="logo"><em><b>Gatsby Docs</b></em></h2></header>
+        <ul>
+          <h5><a class="nav-link" href="#Styling_with_CSS">Styling with CSS</a></h5>
+          <h5><a class="nav-link" href="#Using_global_styles_in_a_layout_component">Using global styles in a layout component</a></h5>
+          <h5><a class="nav-link" href="#Using_Styled_Components">Using Styled Components</a></h5>
+          <h5><a class="nav-link" href="#Using_CSS_Modules">Using CSS Modules</a></h5>
+          <h5><a class="nav-link" href="#Using_Sass/SCSS">Using Sass/SCSS</a></h5>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-sm">
+      <main id="main-doc">
+        <section class="main-section" id="Styling_with_CSS">
+          <header><h2>Styling with CSS</h2></header>
+          <p>There are so many ways to add styles to your website; Gatsby supports almost every possible option, through official and community plugins.</p>
+          <p>Using global CSS files without a Layout component</p>
+          <p>1. Create a global CSS file as src/styles/global.css and paste the following into the file:</p>
+          <pre><code>html {
+  background-color: lavenderblush;
+}
+p {
+  color: maroon;
+}</code></pre>
+          <p>Import the global CSS file in the gatsby-browser.js file such as the following:</p>
+          <pre><code>import "./src/styles/global.css"</code></pre>
+        </section>
+        <section class="main-section" id="Using_global_styles_in_a_layout_component">
+          <header><h2>Using global styles in a layout component</h2></header>
+          <p>You can add global styles to a shared layout component. This component is used for things that are common throughout the site, like a header or footer.</p>
+          <ol>
+            <li>If you don’t already have one, create a new directory in your site at /src/components.</li>
+            <li>Inside the components directory, create two files: layout.css and layout.js.</li>
+            <li>Add the following to layout.css:</li>
+          </ol>
+          <pre><code>body {
+  background: red;
+}</code></pre>
+         
+        </section>
+        <section class="main-section" id="Using_Styled_Components">
+          <header><h2>Using Styled Components</h2></header>
+          <p>1. Inside your gatsby-config.js file add gatsby-plugin-styled-components</p>
+          <pre><code>module.exports = {
+  plugins: [`gatsby-plugin-styled-components`],
+}</code></pre>
+        </section>
+        <section class="main-section" id="Using_CSS_Modules">
+          <header><h2>Using CSS Modules</h2></header>
+         <h4>Directions</h4>
+          <ol>
+            <li>Create a CSS module as src/pages/index.module.css and paste the following into the module:</li>
+            <pre><code>.feature {
+  margin: 2rem auto;
+  max-width: 500px;
+}</code></pre>
+            <li>Import the CSS module as a JSX object style in the index.js file by modifying the page.</li>
+          </ol>
+          <p>Note: Notice that the file extension is .module.css instead of .css, which tells Gatsby that this is a CSS module.</p>
+        </section>
+        <section class="main-section" id="Using_Sass/SCSS">
+          <header><h2>Using Sass/SCSS</h2></header>
+          <p>Sass is an extension of CSS that gives you more advanced features like nested rules, variables, mixins, and more.</p>
+          <p>Sass has 2 syntaxes. The most commonly used syntax is “SCSS”, and is a superset of CSS. That means all valid CSS syntax, is valid SCSS syntax. SCSS files use the extension .scss</p>
+          <p>Sass will compile .scss and .sass files to .css files for you, so you can write your stylesheets with more advanced features.</p>
+        </section>
+      </main>
+    </div>
+  </div> 
+</div>
